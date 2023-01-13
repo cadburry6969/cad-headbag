@@ -1,4 +1,4 @@
-Headbag for QBCore Servers with most of the issues fixed.
+Headbag for QBCore Servers with durability (most of the issues are fixed)
 
 # Dependencies
 * qb-core

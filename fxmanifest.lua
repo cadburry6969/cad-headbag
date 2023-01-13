@@ -1,5 +1,5 @@
 fx_version "cerulean"
-games "gta5"
+game "gta5"
 lua54 "yes"
 
 client_script "cl_main.lua"

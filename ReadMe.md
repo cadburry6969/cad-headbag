@@ -21,3 +21,28 @@ else if (itemData.name == "headbag") {
     );
 } 
 ```
+
+> Add the below code in `qb-inventory/server/main.lua` under `giveitem` command
+```lua
+elseif itemData["name"] == "headbag" then
+	info.uses = 5
+```
+
+> To add headbag in shop add below code in `qb-shops/config.lua` (OPTIONAL)
+```lua
+[13] = { -- change this [13] according to your order
+    name = "headbag",
+    price = 400,
+    amount = 50,
+    info = {uses=5},
+    type = "item",
+    slot = 13, -- change this [13] according to your order
+},
+```
+
+> Note: if you want to give headbag in any other resource then you have to pass the info.uses for that item
+```lua
+    -- Example (server): 
+    local Player = QBCore.Functions.GetPlayer(source)
+    Player.Functions.AddItem("headbag", 1, false, {uses=5})
+```

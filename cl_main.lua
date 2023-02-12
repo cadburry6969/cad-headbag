@@ -55,8 +55,12 @@ RegisterNetEvent("headbag:enableHeadbag", function(item)
                         isUsingHeadbag = false
                     end)
                 else
-                    TriggerServerEvent("headbag:damageHeadbag", item)
-                    TriggerServerEvent("headbag:addHeadbagS", playerId)
+                    if IsEntityPlayingAnim(cPlayer, "missminuteman_1ig_2", "handsup_base", 3) then
+                        TriggerServerEvent("headbag:damageHeadbag", item)
+                        TriggerServerEvent("headbag:addHeadbagS", playerId)
+                    else
+                        QBCore.Functions.Notify("Person's hands are down", "error")
+                    end
                     SetTimeout(3000, function()
                         isUsingHeadbag = false
                     end)

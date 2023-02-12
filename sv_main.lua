@@ -42,4 +42,4 @@ end)
 
 RegisterCommand("removeheadbag", function(source, _)
     TriggerClientEvent("headbag:removeHeadbagCmd", source)
-end)
+end, false)

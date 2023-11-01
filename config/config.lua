@@ -34,7 +34,7 @@ Config.RemoveCommandHelp = 'Remove Headbag'
 
 -- notification language
 Config.Lang = {
-    ['no_one_nearby'] = 'No on nearby',
+    ['no_one_nearby'] = 'No one nearby',
     ['use_timeout'] = 'Please wait before you try again',
     ['no_handup'] = 'Person\'s hands are down',
     ['no_headbag_onhead'] = 'Person doesnt have headbag on their head',

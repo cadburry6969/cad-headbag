@@ -1,3 +1,5 @@
+Config = Config or {}
+
 function Notify(msg, type)
     lib.notify({ description = msg, type = type })
 end

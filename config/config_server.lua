@@ -1,3 +1,5 @@
+Config = Config or {}
+
 if Config.Inventory == 'qb' then
     local QBCore = exports['qb-core']:GetCoreObject()
     --[[

@@ -33,7 +33,9 @@ RegisterNetEvent("headbag:toggleHeadbag", function(item)
             isUsingHeadbag = false
         end)
     else
-        if IsEntityPlayingAnim(cPlayer, Config.HandsupAnimation.dict, Config.HandsupAnimation.anim, 3) then
+        local ped = GetPlayerPed(cPlayer)
+        if ped == 0 or ped == -1 then return end
+        if IsEntityPlayingAnim(ped, Config.HandsupAnimation.dict, Config.HandsupAnimation.anim, 3) then
             TriggerServerEvent("headbag:damageHeadbag", item)
             TriggerServerEvent("headbag:addHeadbag", playerId)
         else

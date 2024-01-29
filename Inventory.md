@@ -49,7 +49,7 @@ elseif itemData["name"] == "headbag" then
 ```lua
     ['headbag'] = {
         label = 'Headbag',
-        description = 'Headbag to put on someones head'
+        description = 'Headbag to put on someones head',
         weight = 100,
         stack = false,
         close = true,

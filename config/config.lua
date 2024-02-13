@@ -31,6 +31,7 @@ Config.ToggleCommandHelp = 'Put/remove headbag'
 -- command to remove headbag
 Config.RemoveCommand = 'removeheadbag' -- false: disable command
 Config.RemoveCommandHelp = 'Remove Headbag'
+Config.RemoveCommandKey = 'R' -- key to remove headbag
 
 -- notification language
 Config.Lang = {

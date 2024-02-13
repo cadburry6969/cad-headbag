@@ -66,8 +66,8 @@ elseif itemData["name"] == "headbag" then
     { name = 'headbag', price = 100, metadata = { uses = 10 } },
 ```
 
-> Note: if you want to give headbag in any other resource then you have to pass the metadata.uses for that item
+> Note: if you want to give headbag in any other resource then add below code to your code
 ```lua
     -- Example (server): 
-    exports.ox_inventory(source, "headbag", 1, { uses = 10 })
+    exports.ox_inventory:AddItem(source, "headbag", 1, { uses = 10 })
 ```

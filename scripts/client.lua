@@ -67,4 +67,5 @@ RegisterCommand(Config.RemoveCommand, function(source, _)
     TriggerServerEvent("headbag:removeHeadbag", playerId)
 end, false)
 TriggerEvent('chat:addSuggestion', '/'..Config.RemoveCommand, Config.RemoveCommandHelp)
+RegisterKeyMapping(Config.RemoveCommand, Config.RemoveCommandHelp, 'KEYBOARD', Config.RemoveCommandKey)
 end

@@ -22,6 +22,7 @@ server_scripts {
 ui_page "index.html"
 
 files {
+    "filter.jpeg",
     "index.html"
 }
 

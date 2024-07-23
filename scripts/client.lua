@@ -1,6 +1,15 @@
 local headbagList = GlobalState.headbagList or {}
 local attachedObject = nil
 
+local function areHandsUp(ped)
+    for _, v in pairs(Config.HandsupAnimations) do
+        if IsEntityPlayingAnim(ped, v.dict, v.anim, 3) then
+            return true
+        end
+    end
+    return false
+end
+
 RegisterNetEvent("headbag:addHeadbag", function()
     local ped = cache.ped
     local obj = Config.ObjectAttach
@@ -35,7 +44,7 @@ RegisterNetEvent("headbag:toggleHeadbag", function(item)
     else
         local ped = GetPlayerPed(cPlayer)
         if ped == 0 or ped == -1 then return end
-        if IsEntityPlayingAnim(ped, Config.HandsupAnimation.dict, Config.HandsupAnimation.anim, 3) then
+        if areHandsUp(ped) then
             TriggerServerEvent("headbag:damageHeadbag", item)
             TriggerServerEvent("headbag:addHeadbag", playerId)
         else

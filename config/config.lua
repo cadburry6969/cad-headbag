@@ -3,9 +3,19 @@ Config = {}
 Config.UseHeadbagTimeout = 3000 -- (milliseconds)
 
 -- what animation is required from target to put headbag on them
-Config.HandsupAnimation = {
-    dict = 'missminuteman_1ig_2',
-    anim = 'handsup_base'
+Config.HandsupAnimations = {
+    {
+        dict = 'missminuteman_1ig_2',
+        anim = 'handsup_base'
+    },
+    {
+        dict = 'anim@mp_player_intuppersurrender',
+        anim = 'idle_a_fp'
+    },
+    {
+        dict = 'anim@mp_rollarcoaster',
+        anim = 'hands_up_idle_a_player_one'
+    }
 }
 
 -- object to attach the player when headbag worn

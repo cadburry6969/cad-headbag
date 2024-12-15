@@ -31,8 +31,8 @@ Config.ObjectAttach = {
 }
 
 -- edit the item info in `config/config_server.lua`
--- set this to 'none' if you dont want headbag as item
-Config.Inventory = 'qb' -- 'qb', 'ox', 'none'
+-- set this to true if you dont want headbag as item
+Config.DisableItem = false
 
 -- command to toggle headbag
 Config.ToggleCommand = 'headbag' -- false: disable command

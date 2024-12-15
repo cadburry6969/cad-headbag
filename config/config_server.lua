@@ -1,6 +1,7 @@
 Config = Config or {}
 
-if Config.Inventory == 'qb' then
+if not Config.DisableItem then
+if GetResourceState('qb-inventory') == 'started' or GetResourceState('lj-inventory') == 'started' or GetResourceState('ps-inventory') == 'started' then
     local QBCore = exports['qb-core']:GetCoreObject()
     --[[
     local success, message = exports['qb-core']:AddItem("headbag", {
@@ -40,7 +41,7 @@ if Config.Inventory == 'qb' then
     end)
 end
 
-if Config.Inventory == 'ox' then
+if GetResourceState('ox_inventory') == 'started' then
     --[[ (Add below code in ox_inventory/data/items.lua)
         ['headbag'] = {
             label = 'Headbag',
@@ -82,4 +83,5 @@ if Config.Inventory == 'ox' then
             return
         end
     end)
+end
 end
